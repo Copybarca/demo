@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<form>
+    <p>Отпускные раситывются как P/12/29,3</p>
+    <ul>
+        <li>P - Зарплата за год</li>
+    </ul>
+    <p style="vertical-align: center">
+        <label>
+            <input type="text" name="salary" placeholder="Введите заработную плату за год" size="30" />
+        </label>
+
+    </p>
+    <p style="vertical-align: center">
+        <label>
+            <input type="text" name="day" placeholder="Введите количество дней отпуска" size="30" />
+        </label>
+
+    </p>
+    <p th:text="'Расчёт отпускных в месяц '+${salary}"></p>
+    <p>
+        <button type="submit" >Отправить</button>
+        <button type="reset">Отмена</button>
+    </p>
+</form>
+</body>
+</html>
